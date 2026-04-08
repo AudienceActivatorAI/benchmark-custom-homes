@@ -18,15 +18,14 @@ const LT  = "#F0F0EF";
 const values = [
   { title: "Precision",       body: "We don\u2019t do approximate. Every specification, every timeline, every cost is documented and held to." },
   { title: "Accountability",  body: "One point of contact. Full ownership. If something isn\u2019t right, we make it right \u2014 no passing responsibility." },
-  { title: "Transparency",    body: "You have real-time access to your project portal, budget tracking, and schedule from day one." },
+  { title: "Transparency",    body: "No client portal required — you stay informed with clear communication, budget and schedule visibility, and photo documentation when you need it." },
   { title: "Craft",           body: `We source materials and tradespeople that the top 1% of ${siteConfig.hq.region} builders rely on. Finish quality you\u2019ll notice for decades.` },
 ];
 
 const team = [
-  { name: "David Harrington", title: "Founder & Principal Builder",  years: "23 years" },
-  { name: "Claire Nakamura",  title: "Director of Design",           years: "14 years" },
-  { name: "James Wolff",      title: "Senior Project Manager",       years: "17 years" },
-  { name: "Rachel Chen",      title: "Client Experience Lead",       years: "9 years" },
+  { name: "Warren Taylor", title: "Owner / General Contractor", years: "30 years" },
+  { name: "Abel Garcia", title: "Project Manager", years: "10 years" },
+  { name: "Marissa", title: "Business Manager & Purchasing Agent", years: "20+ years" },
 ];
 
 export default function About() {
@@ -50,13 +49,13 @@ export default function About() {
         <div style={{ maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6rem", alignItems: "center" }} className="two-col">
           <ScrollReveal variant="left">
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.75rem, 3vw, 2.5rem)", fontWeight: 300, color: "#231F20", lineHeight: 1.2, marginBottom: "1.5rem" }}>
-              Twenty-three years. One standard.
+              Thirty years. One standard.
             </h2>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: MID, marginBottom: "1.25rem" }}>
-              Benchmark was founded in 2002 by David Harrington after a decade of project management for the region&apos;s largest commercial contractors. His conviction was simple: the discipline, precision, and accountability that define exceptional commercial construction had no reason to stop at the residential door.
+              Benchmark is led by Warren Taylor, a lifelong Washington resident and licensed General Contractor with three decades in the field. He started on the Olympic Peninsula in 1996 before bringing the same hands-on approach to Central Washington — custom homes, additions, and full renovations. Warren earned his Construction Management Certificate from the University of Washington in 2002 and spends most of his time on site guarding quality, schedule, and coordination across every trade.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: MID, marginBottom: "1.25rem" }}>
-              Over two decades, we&apos;ve built more than 140 custom homes across {siteConfig.hq.region} — from ranch estates in the Kittitas Valley to mountain retreats near Cle Elum. Each one a reflection of a family&apos;s vision, delivered without compromise. We&apos;ve earned a reputation that produces more referrals than any advertising campaign ever could.
+              Over the years, we&apos;ve built more than 140 custom homes across {siteConfig.hq.region} — from ranch estates in the Kittitas Valley to mountain retreats near Cle Elum. Each one a reflection of a family&apos;s vision, delivered without compromise. We&apos;ve earned a reputation that produces more referrals than any advertising campaign ever could.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: MID }}>
               We are selective by design. Taking fewer projects than we could means every client gets the full weight of our focus.
@@ -111,7 +110,7 @@ export default function About() {
           <ScrollReveal>
             <Eyebrow>The Team</Eyebrow>
           </ScrollReveal>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2rem" }} className="team-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem" }} className="team-grid">
             {team.map((member, i) => (
               <ScrollReveal key={member.name} delay={i * 80}>
                 <div>

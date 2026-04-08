@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: `${siteConfig.company} | ${siteConfig.tagline}`,
-  description: `${siteConfig.company} builds precision-crafted custom homes across ${siteConfig.hq.region}. Fixed-price contracts, daily oversight, and a two-year craftsmanship warranty.`,
+  description: `${siteConfig.company} builds precision-crafted custom homes across ${siteConfig.hq.region}. Flexible contracts, field-led oversight, clear communication on budget and schedule, and a six-year structural plus one-year full coverage warranty.`,
 };
 
 const R    = "#C41E2A";
@@ -22,8 +22,8 @@ const processSteps = [
   { number: "01", title: "Discovery & Vision",    body: "We begin with an in-depth consultation to understand how you live, what you value, and what your home must deliver. No assumptions. No templates." },
   { number: "02", title: "Design & Architecture", body: "Working alongside your architect or ours, we translate your vision into precise plans with detailed specifications and transparent cost modeling." },
   { number: "03", title: "Pre-Construction",      body: "Every subcontractor is vetted. Every material is sourced. Every schedule is locked before a single foundation pour begins." },
-  { number: "04", title: "Build & Oversight",     body: "Our project managers are on-site daily. You receive weekly progress reports, real-time access to your project portal, and zero surprises." },
-  { number: "05", title: "Delivery & Warranty",   body: "A structured walkthrough, a documented punch list, and a two-year craftsmanship warranty. Your home is delivered complete — not nearly complete." },
+  { number: "04", title: "Build & Oversight",     body: "Our project managers lead from the field — daily oversight, steady communication, and budget, schedule, and photos kept available so you always know where things stand." },
+  { number: "05", title: "Delivery & Warranty",   body: "A structured walkthrough, a documented punch list, and warranty coverage that includes six years structural and one year full coverage. Your home is delivered complete — not nearly complete." },
 ];
 
 export default function Home() {
@@ -52,10 +52,10 @@ export default function Home() {
           <ScrollReveal delay={200}>
             <div style={{ display: "flex", flexDirection: "column" as const, gap: "0" }}>
               {[
-                { title: "Fixed-Price Contracts",  body: "We commit to a number and honor it." },
-                { title: "On-Site Daily Oversight", body: "Your project manager is there every day." },
-                { title: "Real-Time Project Portal",body: "Budget, schedule, and photos — always accessible." },
-                { title: "Two-Year Warranty",       body: "Full craftsmanship coverage after delivery." },
+                { title: "Flexible Contract Options", body: "We work with our clients and lenders during the contract phase to fit their needs." },
+                { title: "Focused Project Oversight", body: "We focus on management from the field, keeping the project on track and up to our standards." },
+                { title: "Communication", body: "Budget, schedule, and photos are always available." },
+                { title: "Structural & Full Coverage Warranty", body: "Six-year structural and one-year full coverage warranty." },
               ].map((item) => (
                 <div key={item.title} style={{
                   display: "flex",

@@ -8,7 +8,6 @@ export function generateOrganizationSchema() {
     url: siteConfig.url,
     logo: `${siteConfig.url}/benchmark-logo.png`,
     description: `${siteConfig.company} builds precision-crafted custom homes for discerning clients across ${siteConfig.hq.region}.`,
-    telephone: siteConfig.phone,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
@@ -36,7 +35,6 @@ export function generateLocalBusinessSchema() {
     name: siteConfig.company,
     url: siteConfig.url,
     image: `${siteConfig.url}/benchmark-logo.png`,
-    telephone: siteConfig.phone,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",

@@ -1,7 +1,7 @@
 export const siteConfig = {
   company: "Benchmark Custom Homes",
   companyLegal: "Benchmark Custom Homes LLC",
-  tagline: "Central Washington's Premier Custom Home Builder",
+  tagline: "Setting the Quality Standard",
   shortTagline: "Precision-Built Custom Homes",
   founded: 2002,
 
@@ -13,10 +13,8 @@ export const siteConfig = {
     region: "Central Washington",
   },
 
-  phone: "(509) 555-0100",
-  phoneHref: "tel:+15095550100",
-  email: "hello@benchmarkhomes.com",
-  emailHref: "mailto:hello@benchmarkhomes.com",
+  email: "info@benchmarkch.com",
+  emailHref: "mailto:info@benchmarkch.com",
 
   serviceAreas: ["Ellensburg", "Cle Elum", "Kittitas County", "Yakima Valley"],
   serviceAreaString: "Ellensburg · Cle Elum · Kittitas County · Yakima Valley",
@@ -24,8 +22,8 @@ export const siteConfig = {
   url: "https://benchmarkcustomhomes.com",
 
   stats: {
-    years: "23",
-    yearsLabel: "Years in Central Washington",
+    years: "30",
+    yearsLabel: "Years as a Licensed GC",
     projectValue: "$2.1B",
     projectValueLabel: "In Completed Projects",
     homesDelivered: "140+",

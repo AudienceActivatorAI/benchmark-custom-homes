@@ -22,7 +22,7 @@ const testimonials = [
   { author: "Robert & Lisa M.", rating: 5, body: "What impressed us most was the project portal. Every day we could see exactly what was happening, what was spent, and what was coming next. No other builder offered that transparency.", date: "2023-11-08", location: "Kittitas County, WA" },
   { author: "James & Amanda P.", rating: 5, body: "We were nervous about building on a rural parcel with well and septic requirements. Benchmark had done it dozens of times and handled every complication before it became our problem.", date: "2023-08-12", location: "Ellensburg, WA" },
   { author: "Thomas & Maria G.", rating: 5, body: "The fixed-price contract was what sold us. After hearing horror stories from friends whose builds went 30\u201340% over budget, knowing our final number upfront gave us real peace of mind.", date: "2023-05-22", location: "Yakima Valley, WA" },
-  { author: "Steven & Karen L.", rating: 5, body: "From the first meeting to handing us the keys, David and his team treated our project like it was the only one on their schedule. The attention to detail in the finish work is extraordinary.", date: "2022-12-01", location: "Cle Elum, WA" },
+  { author: "Steven & Karen L.", rating: 5, body: "From the first meeting to handing us the keys, Warren and his team treated our project like it was the only one on their schedule. The attention to detail in the finish work is extraordinary.", date: "2022-12-01", location: "Cle Elum, WA" },
 ];
 
 export default function Testimonials() {

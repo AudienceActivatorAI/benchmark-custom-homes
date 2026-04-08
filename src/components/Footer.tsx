@@ -36,9 +36,9 @@ export default function Footer() {
             </div>
             <p style={{
               fontFamily: "var(--font-sans)",
-              fontSize: "0.875rem",
+              fontSize: "0.9rem",
               lineHeight: 1.7,
-              color: "#6B6568",
+              color: "#9B9698",
               maxWidth: "280px",
             }}>
               Precision-built custom homes for discerning clients across {siteConfig.hq.region}.
@@ -59,7 +59,7 @@ export default function Footer() {
                     cursor: "pointer",
                     transition: "all 0.25s ease",
                   }}
-                  className="link-mid"
+                  className="link-ash"
                 >
                   {social}
                 </span>
@@ -94,7 +94,7 @@ export default function Footer() {
               <div key={item.label} style={{ marginBottom: "0.85rem" }}>
                 <Link
                   href={item.href}
-                  className="link-mid"
+                  className="link-ash"
                   style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem" }}
                 >
                   {item.label}
@@ -129,7 +129,7 @@ export default function Footer() {
               <div key={item.label} style={{ marginBottom: "0.85rem" }}>
                 <Link
                   href={item.href}
-                  className="link-mid"
+                  className="link-ash"
                   style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem" }}
                 >
                   {item.label}
@@ -164,7 +164,7 @@ export default function Footer() {
               <div key={item.label} style={{ marginBottom: "0.85rem" }}>
                 <Link
                   href={item.href}
-                  className="link-mid"
+                  className="link-ash"
                   style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem" }}
                 >
                   {item.label}
@@ -190,16 +190,13 @@ export default function Footer() {
               <span style={{ width: "12px", height: "1px", backgroundColor: "#C41E2A", display: "inline-block" }} />
               Contact
             </div>
-            <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: "#6B6568", lineHeight: 1.8 }}>
+            <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", color: "#9B9698", lineHeight: 1.8 }}>
               <p>{siteConfig.hq.city}, {siteConfig.hq.state}</p>
               <p style={{ marginTop: "0.75rem" }}>
-                <a href={siteConfig.phoneHref} className="link-mid" style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem" }}>
-                  {siteConfig.phone}
+                <a href={siteConfig.emailHref} className="link-ash" style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem" }}>
+                  {siteConfig.email}
                 </a>
               </p>
-              <a href={siteConfig.emailHref} className="link-mid" style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem" }}>
-                {siteConfig.email}
-              </a>
               <div style={{ marginTop: "1.75rem" }}>
                 <Link
                   href="/contact"
@@ -228,14 +225,15 @@ export default function Footer() {
           flexWrap: "wrap" as const,
           gap: "1rem",
         }}>
-          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: "#3A3537" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.875rem", color: "rgba(255,255,255,0.62)", lineHeight: 1.5 }}>
             © {new Date().getFullYear()} {siteConfig.companyLegal}. All rights reserved.
           </p>
           <p style={{
             fontFamily: "var(--font-sans)",
-            fontSize: "0.7rem",
-            color: "#3A3537",
+            fontSize: "0.875rem",
+            color: "rgba(255,255,255,0.62)",
             letterSpacing: "0.03em",
+            lineHeight: 1.5,
           }}>
             Serving {siteConfig.serviceAreaString}
           </p>

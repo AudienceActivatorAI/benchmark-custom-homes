@@ -314,7 +314,7 @@ export default function Nav() {
               Serving {siteConfig.serviceAreas.join(", ")}
             </p>
             <a
-              href={siteConfig.phoneHref}
+              href={siteConfig.emailHref}
               style={{
                 display: "block",
                 fontFamily: "var(--font-sans)",
@@ -325,7 +325,7 @@ export default function Nav() {
                 fontWeight: 500,
               }}
             >
-              {siteConfig.phone}
+              {siteConfig.email}
             </a>
           </div>
         </div>

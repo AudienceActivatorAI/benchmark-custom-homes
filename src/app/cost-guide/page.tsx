@@ -69,7 +69,7 @@ export default function CostGuide() {
               <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", fontWeight: 300, fontStyle: "italic", color: BK, lineHeight: 1.4, marginBottom: "1.5rem" }}>
                 &ldquo;A fixed-price contract means you know what you&apos;ll pay before we break ground. That&apos;s not a promise — it&apos;s a contractual obligation.&rdquo;
               </div>
-              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: "#A8A4A5" }}>— David Harrington, Founder</p>
+              <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: "#A8A4A5" }}>— Warren Taylor, Owner</p>
             </div>
           </ScrollReveal>
         </div>

@@ -44,7 +44,6 @@ export default function Contact() {
               </p>
               {[
                 { label: "Location", content: `${siteConfig.hq.city}, ${siteConfig.hq.state}\nServing ${siteConfig.hq.region}`, href: "" },
-                { label: "Phone",    content: siteConfig.phone,  href: siteConfig.phoneHref },
                 { label: "Email",    content: siteConfig.email,  href: siteConfig.emailHref },
               ].map((item) => (
                 <div key={item.label} style={{ marginBottom: "2rem" }}>
@@ -63,7 +62,7 @@ export default function Contact() {
                 <p style={{ fontFamily: "var(--font-serif)", fontSize: "1.1rem", fontWeight: 300, fontStyle: "italic", color: BK, lineHeight: 1.5 }}>
                   &ldquo;Every project begins with a conversation — not a quote.&rdquo;
                 </p>
-                <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: "#A8A4A5", marginTop: "0.75rem" }}>— David Harrington, Founder</p>
+                <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: "#A8A4A5", marginTop: "0.75rem" }}>— Warren Taylor, Owner</p>
               </div>
             </div>
           </ScrollReveal>
