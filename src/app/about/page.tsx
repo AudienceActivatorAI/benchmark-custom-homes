@@ -23,9 +23,24 @@ const values = [
 ];
 
 const team = [
-  { name: "Warren Taylor", title: "Owner / General Contractor", years: "30 years" },
-  { name: "Abel Garcia", title: "Project Manager", years: "10 years" },
-  { name: "Marissa", title: "Business Manager & Purchasing Agent", years: "20+ years" },
+  {
+    name: "Warren Taylor",
+    title: "Owner / General Contractor",
+    years: "30 years",
+    bio: "A lifetime Washington resident, Warren has been a licensed General Contractor for 30 years, starting on the Olympic Peninsula in 1996 and relocating to Central Washington several years ago. He seeks out challenging, diverse work — from custom homes and additions to full updates and renovations. Warren spends most of his time in the field monitoring quality and schedule so every phase meets the highest standard. Alongside deep hands-on experience, he brings strong project management: organizing trades day to day for the good of the project. He earned his Construction Management Certificate from the University of Washington in 2002.",
+  },
+  {
+    name: "Abel Garcia",
+    title: "Project Manager",
+    years: "10 years",
+    bio: "Abel has worked alongside Warren for the past 10 years. His eye for detail and his organizational skills keep projects moving. Strong relationships with subcontractors and suppliers give him firm control of each job. Abel handles daily scheduling, inspections, quality control, and site management. Suppliers and trades know him as a sharp problem solver and highly resourceful partner in the field.",
+  },
+  {
+    name: "Marissa",
+    title: "Business Manager & Purchasing Agent",
+    years: "20+ years",
+    bio: "Marissa coordinates purchasing for every project under construction. She works with clients and interior designers to supply the information and materials field leadership needs so the build matches the client\u2019s specifications. On the business side, she oversees bookkeeping so reliable trades are paid on budget and on time. She has more than 20 years in the industry.",
+  },
 ];
 
 export default function About() {
@@ -110,23 +125,40 @@ export default function About() {
           <ScrollReveal>
             <Eyebrow>The Team</Eyebrow>
           </ScrollReveal>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem" }} className="team-grid">
+          <div style={{ display: "flex", flexDirection: "column" as const, gap: "3.5rem", marginTop: "2.5rem" }}>
             {team.map((member, i) => (
               <ScrollReveal key={member.name} delay={i * 80}>
-                <div>
-                  <div className="portfolio-card" style={{
-                    aspectRatio: "3/4",
-                    marginBottom: "1.25rem",
-                    position: "relative",
-                    overflow: "hidden",
-                    backgroundColor: BK,
-                  }}>
+                <div
+                  className="team-bio-row"
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "minmax(200px, 260px) 1fr",
+                    gap: "2.5rem",
+                    alignItems: "start",
+                    paddingBottom: "3.5rem",
+                    borderBottom: i < team.length - 1 ? "1px solid #E5E3E3" : "none",
+                  }}
+                >
+                  <div
+                    className="portfolio-card"
+                    style={{
+                      aspectRatio: "3/4",
+                      maxWidth: "260px",
+                      width: "100%",
+                      position: "relative",
+                      overflow: "hidden",
+                      backgroundColor: BK,
+                    }}
+                  >
                     <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #2E2B2C 0%, #1A1718 100%)" }} />
                     <div style={{ position: "absolute", bottom: "1rem", right: "1rem", width: "10px", height: "10px", backgroundColor: R, transform: "rotate(45deg)" }} />
                   </div>
-                  <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.15rem", fontWeight: 400, color: "#231F20", marginBottom: "0.25rem" }}>{member.name}</h3>
-                  <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: R, marginBottom: "0.15rem", letterSpacing: "0.05em" }}>{member.title}</p>
-                  <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: "#A8A4A5" }}>{member.years} experience</p>
+                  <div>
+                    <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.25rem, 2.5vw, 1.5rem)", fontWeight: 400, color: "#231F20", marginBottom: "0.35rem" }}>{member.name}</h3>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: R, marginBottom: "0.35rem", letterSpacing: "0.06em", textTransform: "uppercase" as const }}>{member.title}</p>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.8rem", color: "#A8A4A5", marginBottom: "1.25rem" }}>{member.years} in the industry</p>
+                    <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.85, color: MID, margin: 0 }}>{member.bio}</p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
