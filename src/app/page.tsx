@@ -3,7 +3,7 @@ import Link from "next/link";
 import VideoHero from "@/components/VideoHero";
 import ScrollReveal from "@/components/ScrollReveal";
 import Eyebrow from "@/components/Eyebrow";
-import { getFeaturedProjects } from "@/lib/portfolio-data";
+import { getFeaturedProjects, portfolioZoomLayerStyle } from "@/lib/portfolio-data";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -105,7 +105,7 @@ export default function Home() {
               {featuredProjects.map((project) => (
                 <Link key={project.slug} href="/portfolio" style={{ textDecoration: "none" }}>
                   <div className="portfolio-card" style={{ backgroundColor: project.bg, aspectRatio: "4/3", position: "relative", overflow: "hidden" }}>
-                    <div style={{ position: "absolute", inset: 0, background: `linear-gradient(135deg, ${project.bg} 0%, #2E2B2C 100%)`, transition: "transform 0.6s cubic-bezier(0.16,1,0.3,1)" }} className="card-zoom-img" />
+                    <div style={portfolioZoomLayerStyle(project, 600)} className="card-zoom-img" />
                     <div style={{
                       position: "absolute",
                       top: "1.5rem",

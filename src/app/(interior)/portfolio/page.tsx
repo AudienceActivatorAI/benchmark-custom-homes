@@ -3,7 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import Eyebrow from "@/components/Eyebrow";
 import Breadcrumb from "@/components/Breadcrumb";
-import { projects } from "@/lib/portfolio-data";
+import { portfolioZoomLayerStyle, projects } from "@/lib/portfolio-data";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -49,12 +49,7 @@ export default function Portfolio() {
                   overflow: "hidden",
                   cursor: "pointer",
                 }}>
-                  <div style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: `linear-gradient(135deg, ${project.bg} 0%, #2E2B2C 100%)`,
-                    transition: "transform 0.7s cubic-bezier(0.16,1,0.3,1)",
-                  }} className="card-zoom-img" />
+                  <div style={portfolioZoomLayerStyle(project)} className="card-zoom-img" />
                   <div style={{
                     position: "absolute",
                     top: "1.25rem",

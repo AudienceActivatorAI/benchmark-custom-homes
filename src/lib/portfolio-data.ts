@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 export interface PortfolioProject {
   slug: string;
   title: string;
@@ -7,6 +9,10 @@ export interface PortfolioProject {
   size: string;
   year: string;
   bg: string;
+  /** Hero image for grid cards; first image should be primary exterior when available */
+  coverImage?: string;
+  /** Full set of project photos (public paths) */
+  gallery?: string[];
   narrative: string;
   challenge: string;
   solution: string;
@@ -15,150 +21,197 @@ export interface PortfolioProject {
 
 export const projects: PortfolioProject[] = [
   {
-    slug: "ellensburg-ranch-estate",
-    title: "Ellensburg Ranch Estate",
-    category: "Custom Build",
-    location: "Ellensburg, WA",
-    area: "ellensburg",
-    size: "4,200 sq ft",
-    year: "2024",
-    bg: "#1A1718",
-    narrative:
-      "A sprawling single-story ranch home designed for a family who wanted unobstructed views of the Stuart Range from every living space. Open-plan living meets agrarian character.",
-    challenge:
-      "Integrating a 4,200 sq ft floor plan into a sloping 5-acre parcel while maintaining passive solar orientation and wind protection.",
-    solution:
-      "Step-down foundation design that follows the natural grade, with floor-to-ceiling glazing on the west-facing elevation and a sheltered courtyard entry.",
-    buildingContext:
-      "Rural Kittitas County lot with well and septic requirements, 45 mph wind exposure design constraints.",
-  },
-  {
-    slug: "cle-elum-mountain-retreat",
-    title: "Cle Elum Mountain Retreat",
-    category: "Custom Build",
-    location: "Cle Elum, WA",
-    area: "cle-elum",
-    size: "5,800 sq ft",
-    year: "2024",
-    bg: "#252122",
-    narrative:
-      "A four-season mountain retreat at Suncadia that blends contemporary alpine architecture with the rugged beauty of the Cascade foothills. Designed for multi-generational gatherings.",
-    challenge:
-      "Navigating Suncadia design review requirements while achieving a distinctive modern aesthetic on a heavily treed, north-facing slope.",
-    solution:
-      "Tiered floor plan with cantilevered living spaces that preserve mature pines, combined with standing-seam metal roofing and reclaimed timber accents approved by the HOA.",
-    buildingContext:
-      "Suncadia resort community with strict architectural covenants, heavy snow load engineering (80 psf), and seasonal construction constraints.",
-  },
-  {
-    slug: "kittitas-valley-modern",
-    title: "Kittitas Valley Modern",
-    category: "Custom Build",
-    location: "Kittitas, WA",
-    area: "kittitas-county",
-    size: "3,600 sq ft",
-    year: "2023",
-    bg: "#1E1B1C",
-    narrative:
-      "A clean-lined modern farmhouse set on 20 acres of working ranchland. The design bridges agricultural heritage with contemporary living — steel, glass, and concrete meet barn-board siding.",
-    challenge:
-      "Building on an active agricultural parcel while meeting residential energy codes and managing extreme temperature swings from -10°F winters to 100°F summers.",
-    solution:
-      "High-performance building envelope with ICF foundation, triple-pane windows, and a ground-source heat pump system that reduced annual energy costs by 60%.",
-    buildingContext:
-      "Agricultural-zoned parcel requiring conditional use permit, private well, engineered septic system, and 200-amp service from rural utility cooperative.",
-  },
-  {
-    slug: "ellensburg-craftsman",
-    title: "Ellensburg Heritage Craftsman",
-    category: "Custom Build",
-    location: "Ellensburg, WA",
-    area: "ellensburg",
-    size: "3,200 sq ft",
-    year: "2023",
-    bg: "#211E1F",
-    narrative:
-      "A new-construction Craftsman that honors the architectural character of Ellensburg's historic downtown while delivering modern performance and livability.",
-    challenge:
-      "Respecting the scale and material palette of the surrounding historic district while incorporating a modern open floor plan, home office, and three-car garage.",
-    solution:
-      "Authentic Craftsman detailing — tapered columns, exposed rafter tails, and cedar shingle accents — over a structurally modern frame with spray-foam insulation and smart home infrastructure.",
-    buildingContext:
-      "In-town lot near historic district with city sewer/water, specific setback requirements, and neighborhood design sensitivity.",
-  },
-  {
-    slug: "cle-elum-lakeside",
-    title: "Cle Elum Lakeside Home",
-    category: "Custom Build",
-    location: "Cle Elum, WA",
-    area: "cle-elum",
-    size: "4,600 sq ft",
-    year: "2023",
-    bg: "#1C1A1B",
-    narrative:
-      "A lakefront home designed to maximize water views from every room. Floor-to-ceiling glass, natural stone, and warm timber create a Northwest lodge aesthetic refined for year-round living.",
-    challenge:
-      "Shoreline management regulations required building above the ordinary high water mark while still achieving lake-level outdoor living spaces.",
-    solution:
-      "Elevated main floor with walk-out lower level, engineered retaining walls, and a terraced landscape plan that meets all DNR shoreline buffer requirements.",
-    buildingContext:
-      "Shoreline-regulated lot with DNR setback requirements, seasonal high water table, and heavy recreational boat traffic considerations.",
-  },
-  {
-    slug: "yakima-valley-vineyard",
-    title: "Yakima Valley Vineyard Estate",
-    category: "Custom Build",
-    location: "Yakima Valley, WA",
-    area: "yakima-valley",
-    size: "5,400 sq ft",
-    year: "2022",
-    bg: "#242122",
-    narrative:
-      "A Mediterranean-inspired estate nestled among 15 acres of vineyard, with indoor-outdoor living designed for wine country entertaining. Stone arches, courtyard fountain, and a full wine cellar.",
-    challenge:
-      "Achieving authentic Mediterranean mass and materiality in a region with seismic requirements and extreme temperature differentials.",
-    solution:
-      "Steel-reinforced CMU structure with real stucco finish, in-floor radiant heating throughout, and a climate-controlled wine cellar excavated into the hillside.",
-    buildingContext:
-      "Yakima County agricultural zone with irrigation water rights, seismic zone 2B requirements, and fire-wise construction standards.",
-  },
-  {
-    slug: "kittitas-county-contemporary",
-    title: "Kittitas Ridgeline Contemporary",
+    slug: "farmhouse-way",
+    title: "Farmhouse Way",
     category: "Custom Build",
     location: "Kittitas County, WA",
     area: "kittitas-county",
-    size: "4,800 sq ft",
-    year: "2022",
-    bg: "#1A1C1A",
+    size: "4,000 sq ft",
+    year: "2024",
+    bg: "#1E1B1C",
+    coverImage: "/images/portfolio/farmhouse-way/farmhouse-way-01.jpg",
+    gallery: [
+      "/images/portfolio/farmhouse-way/farmhouse-way-01.jpg",
+      "/images/portfolio/farmhouse-way/farmhouse-way-02.jpg",
+      "/images/portfolio/farmhouse-way/farmhouse-way-03.jpg",
+      "/images/portfolio/farmhouse-way/farmhouse-way-04.jpg",
+      "/images/portfolio/farmhouse-way/farmhouse-way-05.jpg",
+      "/images/portfolio/farmhouse-way/farmhouse-way-06.jpg",
+      "/images/portfolio/farmhouse-way/farmhouse-way-07.jpg",
+      "/images/portfolio/farmhouse-way/farmhouse-way-08.jpg",
+    ],
     narrative:
-      "A dramatic hilltop contemporary with 360-degree views of the Kittitas Valley, Stuart Range, and Manastash Ridge. Cantilevered steel and glass define a home that appears to float above the landscape.",
+      "A modern farmhouse with board-and-batten siding, stone bases, and black-trimmed windows — open living spaces, vaulted beams, and refined millwork throughout.",
     challenge:
-      "Extreme wind exposure at the ridgeline elevation required structural engineering far beyond standard residential design parameters.",
+      "Balancing a dramatic roofline and large glass areas with Central Washington climate loads while keeping the exterior palette cohesive in sun and snow.",
     solution:
-      "Steel moment-frame structure rated for 110 mph wind loads, combined with impact-rated glazing and an aerodynamic roofline that reduces uplift forces.",
+      "Careful detailing at porches and gables, high-performance glazing, and interior volumes that connect kitchen, dining, and living without sacrificing warmth.",
     buildingContext:
-      "Hilltop parcel with no road access requiring private road construction, power line extension, and deep well drilling to 400+ feet.",
+      "Rural Kittitas County setting with evergreen views; exterior and interior photography for portfolio (front elevation leads the set).",
   },
   {
-    slug: "ellensburg-teardown-rebuild",
-    title: "Ellensburg Teardown & Rebuild",
-    category: "Teardown · Rebuild",
+    slug: "river-ridge",
+    title: "River Ridge",
+    category: "Custom Build",
     location: "Ellensburg, WA",
     area: "ellensburg",
     size: "3,800 sq ft",
-    year: "2022",
-    bg: "#201E1C",
+    year: "2024",
+    bg: "#211E1F",
+    coverImage: "/images/portfolio/river-ridge/river-ridge-01.jpg",
+    gallery: [
+      "/images/portfolio/river-ridge/river-ridge-01.jpg",
+      "/images/portfolio/river-ridge/river-ridge-02.jpg",
+      "/images/portfolio/river-ridge/river-ridge-03.jpg",
+      "/images/portfolio/river-ridge/river-ridge-04.jpg",
+      "/images/portfolio/river-ridge/river-ridge-05.jpg",
+      "/images/portfolio/river-ridge/river-ridge-06.jpg",
+      "/images/portfolio/river-ridge/river-ridge-07.jpg",
+      "/images/portfolio/river-ridge/river-ridge-08.jpg",
+      "/images/portfolio/river-ridge/river-ridge-09.jpg",
+      "/images/portfolio/river-ridge/river-ridge-10.jpg",
+      "/images/portfolio/river-ridge/river-ridge-11.jpg",
+      "/images/portfolio/river-ridge/river-ridge-12.jpg",
+    ],
     narrative:
-      "A 1960s split-level on a prime half-acre lot was demolished and replaced with a single-story modern home designed for aging in place. Zero-step entry, wide corridors, and universal design throughout.",
+      "Stone-and-timber curb appeal with a dramatic front entry, then bright open living — black fireplace feature walls, marble kitchen, and layered mountain views.",
     challenge:
-      "The original home's foundation had to be completely removed, and the lot's mature landscaping needed preservation during demolition.",
+      "Delivering high-contrast modern finishes and tall glass while keeping the envelope efficient through freeze-thaw and snowy access periods.",
     solution:
-      "Surgical demolition with tree protection fencing, a new engineered foundation with heated slab, and careful reconnection to existing city utilities.",
+      "Thoughtful massing at the entry walk, warm interior layers over efficient shell, and kitchen/living connections framed for both daily life and entertaining.",
     buildingContext:
-      "Established Ellensburg neighborhood with city services, existing utility connections, and mature tree preservation requirements.",
+      "Ellensburg-area build; photography leads with front elevation and entry, then full interior pass.",
+  },
+  {
+    slug: "kokanee-loop",
+    title: "Kokanee Loop",
+    category: "Custom Build",
+    location: "Cle Elum, WA",
+    area: "cle-elum",
+    size: "4,800 sq ft",
+    year: "2025",
+    bg: "#1C1A1B",
+    coverImage: "/images/portfolio/kokanee-loop/kokanee-loop-01.jpg",
+    gallery: [
+      "/images/portfolio/kokanee-loop/kokanee-loop-01.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-02.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-03.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-04.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-05.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-06.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-07.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-08.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-09.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-10.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-11.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-12.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-13.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-14.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-15.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-16.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-17.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-18.jpg",
+      "/images/portfolio/kokanee-loop/kokanee-loop-19.jpg",
+    ],
+    narrative:
+      "A contemporary mountain residence with wood-and-stone exterior, black-trimmed glass, and warm interior living spaces — designed for snowy seasons and big views.",
+    challenge:
+      "Delivering strong indoor-outdoor connection and heavy glazing while meeting alpine snow loads, energy performance, and a tight build window through winter weather.",
+    solution:
+      "Tiered massing with covered outdoor rooms, high-performance windows, and interior layouts that capture light and views from kitchen through great room and primary suite.",
+    buildingContext:
+      "Forest and mountain setting near Cle Elum; photography set leads with front elevation (twilight), second exterior angle, then full interior documentation.",
+  },
+  {
+    slug: "southern-star",
+    title: "Southern Star",
+    category: "Custom Build",
+    location: "Kittitas County, WA",
+    area: "kittitas-county",
+    size: "5,200 sq ft",
+    year: "2024",
+    bg: "#242122",
+    coverImage: "/images/portfolio/southern-star/southern-star-01.jpg",
+    gallery: [
+      "/images/portfolio/southern-star/southern-star-01.jpg",
+      "/images/portfolio/southern-star/southern-star-02.jpg",
+      "/images/portfolio/southern-star/southern-star-03.jpg",
+      "/images/portfolio/southern-star/southern-star-04.jpg",
+      "/images/portfolio/southern-star/southern-star-05.jpg",
+      "/images/portfolio/southern-star/southern-star-06.jpg",
+      "/images/portfolio/southern-star/southern-star-07.jpg",
+      "/images/portfolio/southern-star/southern-star-08.jpg",
+      "/images/portfolio/southern-star/southern-star-09.jpg",
+      "/images/portfolio/southern-star/southern-star-10.jpg",
+      "/images/portfolio/southern-star/southern-star-11.jpg",
+      "/images/portfolio/southern-star/southern-star-12.jpg",
+      "/images/portfolio/southern-star/southern-star-13.jpg",
+      "/images/portfolio/southern-star/southern-star-14.jpg",
+    ],
+    narrative:
+      "A bold mountain contemporary with charcoal siding, stone bases, and a timber-framed entry — plus outdoor living, fire feature, and spa-level interior finishes.",
+    challenge:
+      "Coordinating deep rooflines, large glass, and mixed cladding while keeping thermal performance and weather tightness in a forested, high-elevation setting.",
+    solution:
+      "Layered exterior materials with disciplined window placement, covered outdoor rooms, and interior palettes that balance dark casework with warm wood and light stone.",
+    buildingContext:
+      "Wooded Central Washington setting; image set opens with full front elevation, then rear/outdoor living, followed by interior photography.",
+  },
+  {
+    slug: "morgan-creek",
+    title: "Morgan Creek",
+    category: "Custom Build",
+    location: "Kittitas County, WA",
+    area: "kittitas-county",
+    size: "4,200 sq ft",
+    year: "2024",
+    bg: "#1A1C1A",
+    coverImage: "/images/portfolio/morgan-creek/morgan-creek-01.jpg",
+    gallery: [
+      "/images/portfolio/morgan-creek/morgan-creek-01.jpg",
+      "/images/portfolio/morgan-creek/morgan-creek-02.jpg",
+      "/images/portfolio/morgan-creek/morgan-creek-03.jpg",
+      "/images/portfolio/morgan-creek/morgan-creek-04.jpg",
+      "/images/portfolio/morgan-creek/morgan-creek-05.jpg",
+      "/images/portfolio/morgan-creek/morgan-creek-06.jpg",
+      "/images/portfolio/morgan-creek/morgan-creek-07.jpg",
+      "/images/portfolio/morgan-creek/morgan-creek-08.jpg",
+      "/images/portfolio/morgan-creek/morgan-creek-09.jpg",
+    ],
+    narrative:
+      "Mountain farmhouse character with timber porch, stone bases, and a warm interior — great room stone fireplace, open kitchen, and views that pull the landscape inside.",
+    challenge:
+      "Connecting heavy timber entries and gabled rooflines with efficient envelope details and comfortable daylighting through long winter seasons.",
+    solution:
+      "Layered outdoor rooms at the front porch, generous glazing on the view side, and interior finishes that balance rustic structure with refined cabinetry and lighting.",
+    buildingContext:
+      "Snow-country build in Kittitas County; photo set opens with front entry, full front elevation second, then interior documentation.",
   },
 ];
+
+/** Background layer for portfolio cards — real photo when `coverImage` is set */
+export function portfolioZoomLayerStyle(
+  project: PortfolioProject,
+  transitionMs: number = 700
+): CSSProperties {
+  const base: CSSProperties = {
+    position: "absolute",
+    inset: 0,
+    transition: `transform ${transitionMs}ms cubic-bezier(0.16,1,0.3,1)`,
+  };
+  if (project.coverImage) {
+    return {
+      ...base,
+      backgroundImage: `url(${project.coverImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    };
+  }
+  return {
+    ...base,
+    background: `linear-gradient(135deg, ${project.bg} 0%, #2E2B2C 100%)`,
+  };
+}
 
 /** Get featured projects for the homepage (first 4) */
 export function getFeaturedProjects() {

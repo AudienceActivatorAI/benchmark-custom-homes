@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import Eyebrow from "@/components/Eyebrow";
 import Breadcrumb from "@/components/Breadcrumb";
 import { areasData } from "@/lib/areas-data";
-import { getProjectsByArea } from "@/lib/portfolio-data";
+import { getProjectsByArea, portfolioZoomLayerStyle } from "@/lib/portfolio-data";
 
 const area = areasData["ellensburg"];
 const relatedProjects = getProjectsByArea("ellensburg");
@@ -95,7 +95,7 @@ export default function Ellensburg() {
                     overflow: "hidden",
                     cursor: "pointer",
                   }}>
-                    <div style={{ position: "absolute", inset: 0, background: `linear-gradient(135deg, ${project.bg} 0%, #2E2B2C 100%)`, transition: "transform 0.7s cubic-bezier(0.16,1,0.3,1)" }} className="card-zoom-img" />
+                    <div style={portfolioZoomLayerStyle(project)} className="card-zoom-img" />
                     <div style={{ position: "absolute", top: "1.25rem", right: "1.25rem", width: "8px", height: "8px", backgroundColor: R, transform: "rotate(45deg)", zIndex: 2 }} />
                     <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "2.5rem 1.75rem 1.75rem", background: "linear-gradient(transparent 0%, rgba(26,23,24,0.95) 100%)", zIndex: 2 }}>
                       <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "#D94455", marginBottom: "0.4rem" }}>
