@@ -15,11 +15,11 @@ const MID = "#6B6568";
 const LG  = "#F5F4F4";
 
 const phases = [
-  { number: "01", title: "Discovery & Vision",    duration: "2\u20133 weeks",   description: "Every project begins with listening. We conduct a structured discovery process to understand how you live, what you value architecturally, and what success looks like to you.", details: ["In-depth lifestyle and program consultation", "Site assessment and feasibility review", "Budget range discussion and preliminary scoping", "Architect and design team introductions if needed"] },
-  { number: "02", title: "Design & Specification", duration: "6\u201312 weeks", description: "We translate your vision into precise architectural plans with full material specifications \u2014 eliminating ambiguity before construction begins.", details: ["Architectural drawings and permit set preparation", "Full material and finish specification package", "Fixed-price or GMP proposal with detailed line items", "Interior design coordination"] },
-  { number: "03", title: "Pre-Construction",       duration: "4\u20138 weeks",  description: "The work that prevents problems. Before a single shovel breaks ground, every supplier, subcontractor, and schedule is locked.", details: ["Subcontractor bidding and selection", "Material procurement and long-lead ordering", "Permit acquisition and utility coordination", "Master schedule and milestone planning"] },
-  { number: "04", title: "Construction",           duration: "10\u201318 months", description: "Our project managers are on-site every day. You have direct access to your project portal with daily photo updates, budget tracking, and schedule visibility.", details: ["Dedicated project manager assigned to your build", "Weekly written client updates", "Real-time project portal access", "Monthly budget reviews and change order transparency"] },
-  { number: "05", title: "Completion & Warranty",  duration: "2\u20133 weeks",  description: "A structured final walkthrough, a documented punch list resolved before keys are exchanged, and a two-year craftsmanship warranty.", details: ["Formal pre-completion inspection", "Full punch list documented and completed", "Systems orientation and home manual", "Two-year Benchmark craftsmanship warranty"] },
+  { number: "01", title: "Discovery & Vision",    description: "Every project begins with listening. We conduct a structured discovery process to understand how you live, what you value architecturally, and what success looks like to you.", details: ["In-depth lifestyle and program consultation", "Site assessment and feasibility review", "Budget range discussion and preliminary scoping", "Architect and design team introductions if needed"] },
+  { number: "02", title: "Design & Specification", description: "We translate your vision into precise architectural plans with full material specifications \u2014 eliminating ambiguity before construction begins.", details: ["Architectural drawings and permit set preparation", "Full material and finish specification package", "Budget & Cost Development and Review", "Interior design coordination"] },
+  { number: "03", title: "Pre-Construction",       description: "The work that prevents problems. Before a single shovel breaks ground, every supplier, subcontractor, and schedule is locked.", details: ["Subcontractor bidding and selection", "Material procurement and long-lead ordering", "Permit acquisition and utility coordination", "Master schedule and milestone planning"] },
+  { number: "04", title: "Construction",           description: "Daily on-site project management and continuous detailed updates to the client. Progressive updating of the schedule and budget, providing maximum transparency on project progress and completion timeline.", details: ["Dedicated project manager on site every day", "Continuous detailed updates to the client", "Progressive schedule and budget updates", "Maximum transparency on progress and completion timeline"] },
+  { number: "05", title: "Completion & Warranty",  description: "A structured final walkthrough, a documented punch list resolved before keys are exchanged, and warranty coverage you can rely on.", details: ["Formal pre-completion inspection", "Full punch list documented and completed", "Systems orientation and home manual", "Six Year Structural and One Year Craftsmanship warranties"] },
 ];
 
 export default function Process() {
@@ -64,19 +64,7 @@ export default function Process() {
                   transition: "opacity 0.35s ease",
                 }}>{phase.number}</div>
                 <div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.75rem", flexWrap: "wrap" as const }}>
-                    <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "1.75rem", fontWeight: 400, color: BK, lineHeight: 1 }}>{phase.title}</h2>
-                    <span style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "0.65rem",
-                      color: R,
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase" as const,
-                      border: "1px solid rgba(196,30,42,0.3)",
-                      padding: "0.3rem 0.75rem",
-                      whiteSpace: "nowrap" as const,
-                    }}>{phase.duration}</span>
-                  </div>
+                  <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "1.75rem", fontWeight: 400, color: BK, lineHeight: 1, marginBottom: "0.75rem" }}>{phase.title}</h2>
                   <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.9rem", lineHeight: 1.8, color: MID }}>{phase.description}</p>
                 </div>
                 <div style={{
@@ -103,9 +91,9 @@ export default function Process() {
           <ScrollReveal variant="stagger">
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2px" }} className="guarantee-grid">
               {[
-                { value: "Fixed Price",    label: "We honor our bids. No surprise invoices after contracts are signed." },
-                { value: "On Schedule",    label: "95% of Benchmark projects are completed within the contracted timeline." },
-                { value: "2-Year Warranty",label: "Full craftsmanship warranty on every project. No fine print." },
+                { value: "Cost Transparency", label: "Clarity and regular budget reviews ensure trust that you are getting what you were promised." },
+                { value: "On Schedule",       label: "Tight schedule management and coordination of trades and materials ensure the project maintains the intended schedule." },
+                { value: "Trust",             label: "Providing a 6-year structural and one-year complete craftsmanship warranty provides the client confidence in Benchmark." },
               ].map((g) => (
                 <div key={g.value} className="card-lift" style={{
                   backgroundColor: "#FFFFFF",

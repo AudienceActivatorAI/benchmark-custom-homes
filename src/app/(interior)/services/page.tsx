@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Services | Custom Home Building in Central Washington",
-  description: `${siteConfig.company} offers custom home builds, teardown & rebuild, and luxury remodels across ${siteConfig.hq.region}. Fixed-price contracts and a two-year warranty.`,
+  description: `${siteConfig.company} offers custom home builds, teardown & rebuild, and luxury remodels across ${siteConfig.hq.region}. Transparent budgeting and a six-year structural plus one-year craftsmanship warranty.`,
 };
 
 const R   = "#C41E2A";
@@ -26,8 +26,8 @@ const services = [
       "Premium material sourcing",
       "All permitting and inspections",
       "Well, septic & rural infrastructure coordination",
-      "Fixed-price or GMP contract",
-      "Two-year craftsmanship warranty",
+      "Transparent budget and cost guidance",
+      "6-year structural and one-year craftsmanship warranty",
     ],
   },
   {
@@ -41,7 +41,7 @@ const services = [
       "Utility coordination & reconnection",
       "New construction on existing lot",
       "Landscape and site finishing",
-      "Two-year craftsmanship warranty",
+      "6-year structural and one-year craftsmanship warranty",
     ],
   },
   {
@@ -127,7 +127,7 @@ export default function Services() {
             {[
               { title: "Fixed-Price Contracts",     body: "We commit to a number and honor it. You\u2019ll never receive a surprise invoice for work already completed." },
               { title: "Single Point of Contact",   body: "Your project manager is your only call. No bouncing between departments or subcontractors." },
-              { title: "Real-Time Transparency",    body: "Your project portal gives you daily updates, photo logs, budget tracking, and schedule visibility \u2014 always on." },
+              { title: "Real-Time Transparency",    body: "Daily communication, detailed updates, and clear visibility into budget and schedule \u2014 so you always know where your project stands." },
             ].map((d, i) => (
               <ScrollReveal key={d.title} delay={i * 100}>
                 <div className="card-lift" style={{

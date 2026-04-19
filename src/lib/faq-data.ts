@@ -46,21 +46,21 @@ export const faqItems: FAQItem[] = [
   },
   {
     category: "process",
-    question: "What is the Benchmark project portal?",
+    question: "How do you keep clients informed during construction?",
     answer:
-      "Every Benchmark client receives access to a real-time project portal that provides daily photo updates, budget tracking, schedule visibility, and direct communication with your project manager. You can see exactly where your project stands at any time, from any device.",
+      "Your project manager provides continuous detailed updates, clear budget and schedule visibility, and on-site leadership every day. You stay informed through direct communication and documented reporting — not a separate software login.",
   },
   {
     category: "process",
     question: "How involved will I be during the building process?",
     answer:
-      "As involved as you want to be. Some clients check the portal daily and visit the site weekly; others prefer to receive our weekly written updates and trust the process. Your dedicated project manager is your single point of contact throughout — available to answer questions, review progress, and walk you through decisions as they arise.",
+      "As involved as you want to be. Some clients visit the site weekly and want every detail; others prefer summarized written updates and trust the process. Your dedicated project manager is your single point of contact throughout — available to answer questions, review progress, and walk you through decisions as they arise.",
   },
   {
     category: "process",
-    question: "What does your two-year warranty cover?",
+    question: "What warranty coverage does Benchmark provide?",
     answer:
-      "Our two-year craftsmanship warranty covers all workmanship and materials installed by Benchmark and our subcontractors. This goes beyond the standard one-year builder warranty. We also provide a systems orientation at move-in so you understand how to maintain every component of your new home.",
+      "Benchmark provides a six-year structural warranty and a one-year craftsmanship warranty on workmanship and materials installed by Benchmark and our subcontractors. We also provide a systems orientation at move-in so you understand how to maintain every component of your new home.",
   },
 
   // ── Financing ───────────────────────────────────────────────

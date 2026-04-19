@@ -168,8 +168,6 @@ export default function VideoHero() {
           }}>
             {[
               { value: siteConfig.stats.years,              label: siteConfig.stats.yearsLabel },
-              { value: siteConfig.stats.projectValue,       label: siteConfig.stats.projectValueLabel },
-              { value: siteConfig.stats.homesDelivered,     label: siteConfig.stats.homesDeliveredLabel },
               { value: siteConfig.stats.clientSatisfaction, label: siteConfig.stats.clientSatisfactionLabel },
             ].map((stat) => (
               <div

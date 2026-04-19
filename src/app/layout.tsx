@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.company,
     title: `${siteConfig.company} | ${siteConfig.tagline}`,
-    description: `Precision-built custom homes across ${siteConfig.hq.region}. Fixed-price contracts, daily oversight, and a two-year craftsmanship warranty.`,
+    description: `Precision-built custom homes across ${siteConfig.hq.region}. Fixed-price contracts, daily oversight, and six-year structural plus one-year craftsmanship warranty coverage.`,
     images: [
       {
         url: `${siteConfig.url}/benchmark-logo.png`,

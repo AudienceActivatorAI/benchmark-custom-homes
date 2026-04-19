@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import Eyebrow from "@/components/Eyebrow";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -7,7 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Portfolio | Custom Homes in Central Washington",
-  description: `Explore Benchmark's custom home projects across Ellensburg, Cle Elum, and Kittitas County. ${siteConfig.stats.homesDelivered} homes delivered with a ${siteConfig.stats.clientSatisfaction} referral rate.`,
+  description: `Explore Benchmark's custom home projects across Ellensburg, Cle Elum, and Kittitas County. ${siteConfig.stats.years} of precision-built homes and a ${siteConfig.stats.clientSatisfaction} client referral rate.`,
 };
 
 const R   = "#C41E2A";
@@ -28,8 +29,8 @@ export default function Portfolio() {
             <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(3rem, 6vw, 5rem)", fontWeight: 300, color: BK, lineHeight: 1.05 }}>
               Selected Projects
             </h1>
-            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: MID, maxWidth: "320px", lineHeight: 1.7 }}>
-              {siteConfig.stats.homesDelivered} homes completed across {siteConfig.hq.region}. A selection of recent work.
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.85rem", color: MID, maxWidth: "360px", lineHeight: 1.7 }}>
+              A quality-first portfolio across {siteConfig.hq.region}. Selected recent work.
             </p>
           </div>
         </div>
@@ -103,16 +104,32 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Stats */}
+      {/* Testimonials — prominent */}
+      <section style={{ backgroundColor: "#FFFFFF", padding: "5rem 2rem" }} className="section-padding">
+        <div style={{ maxWidth: "900px", margin: "0 auto", textAlign: "center" as const }}>
+          <ScrollReveal>
+            <Eyebrow>Client Stories</Eyebrow>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.75rem, 3vw, 2.25rem)", fontWeight: 300, color: BK, lineHeight: 1.25, marginBottom: "1rem" }}>
+              Testimonials coming soon
+            </h2>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.75, color: MID, marginBottom: "1.75rem" }}>
+              We&apos;re collecting fresh client feedback; additional stories will appear here after spring break. In the meantime, you can read existing reviews on our testimonials page.
+            </p>
+            <Link href="/testimonials" className="link-underline-red" style={{ fontFamily: "var(--font-sans)", fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase" as const }}>
+              View testimonials →
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Stats — quality over volume */}
       <section style={{ backgroundColor: BK, padding: "6rem 2rem" }} className="section-padding">
         <div style={{ maxWidth: "1320px", margin: "0 auto" }}>
           <ScrollReveal variant="stagger">
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2px" }} className="stats-grid">
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "2px", maxWidth: "880px", margin: "0 auto" }} className="stats-grid">
               {[
-                { value: siteConfig.stats.homesDelivered,     label: "Homes Completed" },
-                { value: siteConfig.stats.projectValue,       label: "Total Project Value" },
                 { value: siteConfig.stats.years,              label: siteConfig.stats.yearsLabel },
-                { value: siteConfig.stats.clientSatisfaction, label: "Referral Rate" },
+                { value: siteConfig.stats.clientSatisfaction, label: siteConfig.stats.clientSatisfactionLabel },
               ].map((stat) => (
                 <div key={stat.label} style={{
                   backgroundColor: "rgba(255,255,255,0.03)",

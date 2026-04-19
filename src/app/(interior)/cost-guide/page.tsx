@@ -141,7 +141,7 @@ export default function CostGuide() {
             {[
               { title: "Fixed-Price Contracts", body: "Once specifications are finalized, we commit to a fixed price. No allowances that become overages. No \u201cunforeseen conditions\u201d on work we should have anticipated." },
               { title: "Transparent Change Orders", body: "If you change something during construction, we document the cost impact before proceeding. No retroactive billing. No surprises on the final invoice." },
-              { title: "Monthly Budget Reviews", body: "You receive monthly budget reports through your project portal showing exactly where your money has been allocated and what remains in each category." },
+              { title: "Monthly Budget Reviews", body: "You receive monthly budget reports showing exactly where your money has been allocated and what remains in each category." },
             ].map((d, i) => (
               <ScrollReveal key={d.title} delay={i * 100}>
                 <div className="card-lift" style={{ borderTop: `3px solid ${R}`, backgroundColor: "#FFFFFF", padding: "2rem", height: "100%" }}>

@@ -19,7 +19,7 @@ const LG  = "#F5F4F4";
 const testimonials = [
   { author: "Michael & Sarah T.", rating: 5, body: "We interviewed four builders. Benchmark was the only team that could explain exactly what would happen, when, and why. That level of clarity made our decision easy.", date: "2024-06-15", location: "Ellensburg, WA" },
   { author: "David & Jennifer R.", rating: 5, body: "Our mountain retreat at Cle Elum was a complex project with strict HOA requirements and challenging terrain. Benchmark navigated every obstacle with solutions, not excuses. The home exceeded what we imagined.", date: "2024-03-20", location: "Cle Elum, WA" },
-  { author: "Robert & Lisa M.", rating: 5, body: "What impressed us most was the project portal. Every day we could see exactly what was happening, what was spent, and what was coming next. No other builder offered that transparency.", date: "2023-11-08", location: "Kittitas County, WA" },
+  { author: "Robert & Lisa M.", rating: 5, body: "What impressed us most was the steady communication. We always knew what was happening, what was spent, and what was coming next. No surprises.", date: "2023-11-08", location: "Kittitas County, WA" },
   { author: "James & Amanda P.", rating: 5, body: "We were nervous about building on a rural parcel with well and septic requirements. Benchmark had done it dozens of times and handled every complication before it became our problem.", date: "2023-08-12", location: "Ellensburg, WA" },
   { author: "Thomas & Maria G.", rating: 5, body: "The fixed-price contract was what sold us. After hearing horror stories from friends whose builds went 30\u201340% over budget, knowing our final number upfront gave us real peace of mind.", date: "2023-05-22", location: "Yakima Valley, WA" },
   { author: "Steven & Karen L.", rating: 5, body: "From the first meeting to handing us the keys, Warren and his team treated our project like it was the only one on their schedule. The attention to detail in the finish work is extraordinary.", date: "2022-12-01", location: "Cle Elum, WA" },
@@ -100,7 +100,7 @@ export default function Testimonials() {
               <div className="diamond-pulse" style={{ width: "16px", height: "16px", backgroundColor: R }} />
             </div>
             <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 300, color: "#F5F4F4", lineHeight: 1.2, marginBottom: "1.5rem" }}>
-              Join 140+ families who&apos;ve built with Benchmark.
+              Ready to write your own Benchmark story?
             </h2>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.8, color: MID, marginBottom: "2.5rem" }}>
               Your project starts with a conversation. Let&apos;s talk about what you&apos;re building.

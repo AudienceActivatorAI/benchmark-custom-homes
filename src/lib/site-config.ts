@@ -22,7 +22,7 @@ export const siteConfig = {
   url: "https://benchmarkcustomhomes.com",
 
   stats: {
-    years: "30",
+    years: "30+",
     yearsLabel: "Years as a Licensed GC",
     projectValue: "$2.1B",
     projectValueLabel: "In Completed Projects",
@@ -32,9 +32,27 @@ export const siteConfig = {
     clientSatisfactionLabel: "Client Referral Rate",
   },
 
+  /** Last name only; displayed as "Marissa {lastName}". Leave empty until provided. */
+  team: {
+    marissaLastName: "Taylor",
+  },
+
   social: {
     instagram: "#",
     houzz: "#",
     linkedin: "#",
   },
 } as const;
+
+export function getMarissaDisplayName(): string {
+  const ln = siteConfig.team.marissaLastName.trim();
+  return ln.length > 0 ? `Marissa ${ln}` : "Marissa";
+}
+
+/**
+ * Optional fixed background images for interior routes (place files under /public/images/page-bg/).
+ * Prefer WebP or JPG, roughly 1600–2400px wide, optimized for web. Keys are pathname strings (e.g. "/process").
+ */
+export const interiorPageBackgrounds: Record<string, string> = {
+  // "/process": "/images/page-bg/process.jpg",
+};

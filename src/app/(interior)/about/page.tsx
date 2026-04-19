@@ -3,7 +3,7 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 import Eyebrow from "@/components/Eyebrow";
 import Breadcrumb from "@/components/Breadcrumb";
-import { siteConfig } from "@/lib/site-config";
+import { getMarissaDisplayName, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "About Benchmark Custom Homes | Central Washington Home Builder",
@@ -36,10 +36,10 @@ const team = [
     bio: "Abel has worked alongside Warren for the past 10 years. His eye for detail and his organizational skills keep projects moving. Strong relationships with subcontractors and suppliers give him firm control of each job. Abel handles daily scheduling, inspections, quality control, and site management. Suppliers and trades know him as a sharp problem solver and highly resourceful partner in the field.",
   },
   {
-    name: "Marissa",
+    name: getMarissaDisplayName(),
     title: "Business Manager & Purchasing Agent",
     years: "20+ years",
-    bio: "Marissa coordinates purchasing for every project under construction. She works with clients and interior designers to supply the information and materials field leadership needs so the build matches the client\u2019s specifications. On the business side, she oversees bookkeeping so reliable trades are paid on budget and on time. She has more than 20 years in the industry.",
+    bio: `${getMarissaDisplayName()} coordinates purchasing for every project under construction. She works with clients and interior designers to supply the information and materials field leadership needs so the build matches the client\u2019s specifications. On the business side, she oversees bookkeeping so reliable trades are paid on budget and on time. She has more than 20 years in the industry.`,
   },
 ];
 
@@ -70,7 +70,7 @@ export default function About() {
               Benchmark is led by Warren Taylor, a lifelong Washington resident and licensed General Contractor with three decades in the field. He started on the Olympic Peninsula in 1996 before bringing the same hands-on approach to Central Washington — custom homes, additions, and full renovations. Warren earned his Construction Management Certificate from the University of Washington in 2002 and spends most of his time on site guarding quality, schedule, and coordination across every trade.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: MID, marginBottom: "1.25rem" }}>
-              Over the years, we&apos;ve built more than 140 custom homes across {siteConfig.hq.region} — from ranch estates in the Kittitas Valley to mountain retreats near Cle Elum. Each one a reflection of a family&apos;s vision, delivered without compromise. We&apos;ve earned a reputation that produces more referrals than any advertising campaign ever could.
+              Across {siteConfig.hq.region}, from ranch estates in the Kittitas Valley to mountain retreats near Cle Elum, each home is a reflection of a family&apos;s vision, delivered without compromise. We&apos;ve earned a reputation that produces more referrals than any advertising campaign ever could.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: MID }}>
               We are selective by design. Taking fewer projects than we could means every client gets the full weight of our focus.
