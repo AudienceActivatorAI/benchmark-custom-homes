@@ -42,6 +42,10 @@ export default function Portfolio() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "3px" }} className="portfolio-grid">
             {projects.map((project, i) => (
               <ScrollReveal key={project.slug} delay={(i % 3) * 80}>
+                <Link
+                  href={`/portfolio/${project.slug}`}
+                  style={{ textDecoration: "none", display: "block", color: "inherit" }}
+                >
                 <div className="portfolio-card" style={{
                   backgroundColor: project.bg,
                   aspectRatio: i % 5 === 0 ? "1/1" : "3/4",
@@ -93,6 +97,7 @@ export default function Portfolio() {
                     </p>
                   </div>
                 </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>

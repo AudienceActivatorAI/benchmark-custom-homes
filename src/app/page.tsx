@@ -103,7 +103,7 @@ export default function Home() {
           <ScrollReveal variant="scale" delay={100}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "3px" }} className="portfolio-grid">
               {featuredProjects.map((project) => (
-                <Link key={project.slug} href="/portfolio" style={{ textDecoration: "none" }}>
+                <Link key={project.slug} href={`/portfolio/${project.slug}`} style={{ textDecoration: "none" }}>
                   <div className="portfolio-card" style={{ backgroundColor: project.bg, aspectRatio: "4/3", position: "relative", overflow: "hidden" }}>
                     <div style={portfolioZoomLayerStyle(project, 600)} className="card-zoom-img" />
                     <div style={{

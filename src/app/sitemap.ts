@@ -1,8 +1,15 @@
 import type { MetadataRoute } from "next";
+import { projects } from "@/lib/portfolio-data";
 import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
+  const portfolioProjectEntries: MetadataRoute.Sitemap = projects.map((p) => ({
+    url: `${base}/portfolio/${p.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
 
   return [
     { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
@@ -20,5 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/areas/cle-elum`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/areas/kittitas-county`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/areas/yakima-valley`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    ...portfolioProjectEntries,
   ];
 }

@@ -222,3 +222,14 @@ export function getFeaturedProjects() {
 export function getProjectsByArea(areaSlug: string) {
   return projects.filter((p) => p.area === areaSlug);
 }
+
+export function getProjectBySlug(slug: string): PortfolioProject | undefined {
+  return projects.find((p) => p.slug === slug);
+}
+
+/** All images for project detail (gallery, or cover only) */
+export function getGalleryImages(project: PortfolioProject): string[] {
+  if (project.gallery?.length) return project.gallery;
+  if (project.coverImage) return [project.coverImage];
+  return [];
+}

@@ -88,6 +88,7 @@ export default function Ellensburg() {
             <div style={{ display: "grid", gridTemplateColumns: `repeat(${Math.min(relatedProjects.length, 3)}, 1fr)`, gap: "3px" }} className="portfolio-grid">
               {relatedProjects.map((project, i) => (
                 <ScrollReveal key={project.slug} delay={i * 80}>
+                  <Link href={`/portfolio/${project.slug}`} style={{ textDecoration: "none", display: "block", color: "inherit" }}>
                   <div className="portfolio-card" style={{
                     backgroundColor: project.bg,
                     aspectRatio: "4/3",
@@ -105,6 +106,7 @@ export default function Ellensburg() {
                       <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.7rem", color: "#6B6568", marginTop: "0.4rem" }}>{project.size}</div>
                     </div>
                   </div>
+                  </Link>
                 </ScrollReveal>
               ))}
             </div>
