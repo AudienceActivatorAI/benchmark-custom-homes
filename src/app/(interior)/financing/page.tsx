@@ -24,8 +24,8 @@ const budgetFramework = [
   { number: "01", title: "Land Acquisition", description: "Your lot cost, including any site improvements needed before construction can begin. Consider access, utilities, and terrain." },
   { number: "02", title: "Design & Engineering", description: "Architectural design, structural engineering, civil engineering, geotechnical reports, and interior design fees." },
   { number: "03", title: "Permitting & Fees", description: "Building permits, impact fees, utility connection fees, and any HOA or design review fees." },
-  { number: "04", title: "Construction", description: "The core build cost, including all materials, labor, subcontractors, and project management. This is where a fixed-price contract provides certainty." },
-  { number: "05", title: "Contingency", description: "A responsible budget includes 5\u201310% contingency for owner-requested changes. With a fixed-price contract from Benchmark, builder-side contingency is our responsibility, not yours." },
+  { number: "04", title: "Construction", description: "The core build cost, including all materials, labor, subcontractors, and project management. We align how this phase is specified and budgeted with your overall financing and contract structure, so the numbers your lender reviews reflect your build accurately — without presenting any single contract type as the default." },
+  { number: "05", title: "Contingency", description: "A responsible budget includes 5\u201310% contingency for owner-requested changes. How contingency and builder-side risk are handled depends on your agreement; we work through that with you and your team up front and document it clearly, whether you are building on a cash basis or with a construction loan." },
 ];
 
 export default function Financing() {
@@ -127,7 +127,7 @@ export default function Financing() {
               Construction lenders require detailed project documentation: specifications, draw schedules, builder qualifications, and insurance certificates. We prepare all of it.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: MID }}>
-              Our fixed-price contracts simplify the loan process because lenders have certainty about the total construction cost. This reduces appraisal gaps and accelerates approvals.
+              Clear, detailed specifications and a thorough budget help lenders evaluate construction cost and can reduce appraisal gaps. We prepare documentation in the format your bank expects, work directly with your loan team as questions arise, and tailor the agreement to your project and financing so you have confidence in the value you receive from every building dollar.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={150}>

@@ -86,7 +86,7 @@ export default async function PortfolioProjectPage({ params }: Props) {
               maxWidth: "560px",
             }}
           >
-            {project.size} · {project.location} · {project.year}
+            {project.size} · {project.location}
           </p>
         </div>
       </section>

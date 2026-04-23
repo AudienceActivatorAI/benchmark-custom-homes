@@ -75,7 +75,7 @@ export default function Portfolio() {
                     zIndex: 2,
                   }}>
                     <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "#D94455", marginBottom: "0.4rem" }}>
-                      {project.category} · {project.year}
+                      {project.category}
                     </div>
                     <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.25rem", fontWeight: 300, color: "#F5F4F4", lineHeight: 1.2 }}>{project.title}</div>
                     <div style={{ display: "flex", gap: "1.25rem", marginTop: "0.5rem" }}>

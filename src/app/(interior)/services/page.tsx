@@ -125,7 +125,7 @@ export default function Services() {
           </ScrollReveal>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem" }} className="diff-grid">
             {[
-              { title: "Fixed-Price Contracts",     body: "We commit to a number and honor it. You\u2019ll never receive a surprise invoice for work already completed." },
+              { title: "Customized contract and budget analysis",     body: "We align scope, contract structure, and budget with your build and your financing situation — in partnership with you and, when you use one, your lender. You get clarity and confidence in the value you receive, not a one-size-fits-all pricing model." },
               { title: "Single Point of Contact",   body: "Your project manager is your only call. No bouncing between departments or subcontractors." },
               { title: "Real-Time Transparency",    body: "Daily communication, detailed updates, and clear visibility into budget and schedule \u2014 so you always know where your project stands." },
             ].map((d, i) => (
@@ -143,6 +143,20 @@ export default function Services() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section style={{ backgroundColor: "#FFFFFF", padding: "5rem 2rem" }} className="section-padding">
+        <div style={{ maxWidth: "720px", margin: "0 auto" }}>
+          <ScrollReveal>
+            <Eyebrow>Budget &amp; contract</Eyebrow>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 300, color: BK, lineHeight: 1.25, marginBottom: "1.5rem" }}>
+              Built around your project — and your financial picture.
+            </h2>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: MID }}>
+              Every project begins with a thorough budget and cost analysis tailored to your specific build, financing structure, and goals. Whether you&apos;re working with a lender or building on a cash basis, Benchmark will work alongside you and your financial team to structure an agreement that provides full transparency and maximum value from every building dollar. We can help streamline communication with your lender; contract structures may differ depending on whether you pay cash or use construction financing, because each build and each client relationship is unique.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 

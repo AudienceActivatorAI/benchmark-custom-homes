@@ -100,7 +100,7 @@ export default function CleElum() {
                     <div style={{ position: "absolute", top: "1.25rem", right: "1.25rem", width: "8px", height: "8px", backgroundColor: R, transform: "rotate(45deg)", zIndex: 2 }} />
                     <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "2.5rem 1.75rem 1.75rem", background: "linear-gradient(transparent 0%, rgba(26,23,24,0.95) 100%)", zIndex: 2 }}>
                       <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "#D94455", marginBottom: "0.4rem" }}>
-                        {project.category} · {project.year}
+                        {project.category}
                       </div>
                       <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.25rem", fontWeight: 300, color: "#F5F4F4", lineHeight: 1.2 }}>{project.title}</div>
                       <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.7rem", color: "#6B6568", marginTop: "0.4rem" }}>{project.size}</div>

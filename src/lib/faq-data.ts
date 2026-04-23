@@ -14,9 +14,9 @@ export const faqItems: FAQItem[] = [
   },
   {
     category: "cost",
-    question: "What is included in a Benchmark fixed-price contract?",
+    question: "What is included in a Benchmark project agreement?",
     answer:
-      "A Benchmark fixed-price contract includes all labor, materials, permitting, site preparation, and project management required to deliver your home as specified. We document every line item in advance. If we miss something in our scope, we absorb the cost — not you. The only additions to the contract price are changes you choose to make after signing.",
+      "What we put in writing reflects your project: typically labor, materials, permitting, site preparation, and project management to deliver the home and finishes we have scoped together. We document line items in detail before work that depends on them proceeds. The exact contract structure — and how cost risk is shared — is tailored to your build and whether you are paying cash or using a lender, not a single standard format for every home.",
   },
   {
     category: "cost",
@@ -26,9 +26,9 @@ export const faqItems: FAQItem[] = [
   },
   {
     category: "cost",
-    question: "Do you offer a Guaranteed Maximum Price (GMP) option?",
+    question: "How do contract type and budget caps work?",
     answer:
-      "Yes. For clients who want flexibility to make selections during construction, we offer a GMP contract that caps your total investment while allowing for design refinements within the approved scope. This gives you the protection of a ceiling price with the adaptability of a cost-plus arrangement.",
+      "Every home is different, so agreement structure varies. Sometimes a guaranteed maximum price or similar ceiling makes sense; sometimes a different model fits your scope, your timeline, and how you are financing. We walk through the options in discovery, partner with you and your lender when applicable, and choose an approach that gives you confidence and real value from your building investment — not a one-size-fits-all template.",
   },
 
   // ── Process ─────────────────────────────────────────────────

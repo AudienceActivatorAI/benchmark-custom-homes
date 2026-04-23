@@ -127,7 +127,7 @@ export default function Home() {
                       zIndex: 2,
                     }}>
                       <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.6rem", fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase" as const, color: "#D94455", marginBottom: "0.5rem" }}>
-                        {project.category} · {project.year}
+                        {project.category}
                       </div>
                       <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", fontWeight: 300, color: "#F5F4F4", lineHeight: 1.2 }}>{project.title}</div>
                       <div style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: "#6B6568", marginTop: "0.35rem" }}>{project.size} · {project.location}</div>

@@ -7,7 +7,6 @@ export interface PortfolioProject {
   location: string;
   area: string;
   size: string;
-  year: string;
   bg: string;
   /** Hero image for grid cards; first image should be primary exterior when available */
   coverImage?: string;
@@ -27,7 +26,6 @@ export const projects: PortfolioProject[] = [
     location: "Kittitas County, WA",
     area: "kittitas-county",
     size: "4,000 sq ft",
-    year: "2024",
     bg: "#1E1B1C",
     coverImage: "/images/portfolio/farmhouse-way/farmhouse-way-01.jpg",
     gallery: [
@@ -56,7 +54,6 @@ export const projects: PortfolioProject[] = [
     location: "Ellensburg, WA",
     area: "ellensburg",
     size: "3,800 sq ft",
-    year: "2024",
     bg: "#211E1F",
     coverImage: "/images/portfolio/river-ridge/river-ridge-01.jpg",
     gallery: [
@@ -89,7 +86,6 @@ export const projects: PortfolioProject[] = [
     location: "Cle Elum, WA",
     area: "cle-elum",
     size: "4,800 sq ft",
-    year: "2025",
     bg: "#1C1A1B",
     coverImage: "/images/portfolio/kokanee-loop/kokanee-loop-01.jpg",
     gallery: [
@@ -129,7 +125,6 @@ export const projects: PortfolioProject[] = [
     location: "Kittitas County, WA",
     area: "kittitas-county",
     size: "5,200 sq ft",
-    year: "2024",
     bg: "#242122",
     coverImage: "/images/portfolio/southern-star/southern-star-01.jpg",
     gallery: [
@@ -164,7 +159,6 @@ export const projects: PortfolioProject[] = [
     location: "Kittitas County, WA",
     area: "kittitas-county",
     size: "4,200 sq ft",
-    year: "2024",
     bg: "#1A1C1A",
     coverImage: "/images/portfolio/morgan-creek/morgan-creek-01.jpg",
     gallery: [

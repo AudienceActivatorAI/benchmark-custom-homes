@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Cost Guide | How Much Does It Cost to Build a Custom Home in Central Washington?",
-  description: "Understand the factors that affect custom home building costs in Central Washington. Learn about site costs, material choices, and how Benchmark's fixed-price contracts protect your investment.",
+  description: "Understand the factors that affect custom home building costs in Central Washington. Learn about site costs, material choices, and how Benchmark's customized contract and budget analysis helps you plan with confidence.",
 };
 
 const R   = "#C41E2A";
@@ -61,13 +61,13 @@ export default function CostGuide() {
               Most builders quote a cost-per-square-foot number. That number almost never reflects reality. It excludes site work, permits, design fees, and the dozens of decisions that actually determine what you&apos;ll spend.
             </p>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: MID }}>
-              At Benchmark, we walk you through a comprehensive scoping process during Discovery. By the time we present a proposal, every line item is accounted for — and protected by a fixed-price or guaranteed maximum price contract.
+              At Benchmark, we walk you through a comprehensive scoping process during Discovery. By the time we present a proposal, every line item is accounted for — and we align contract structure, budget, and schedule with the unique nature of your build, your financing, and your goals. This is not a one-size-fits-all cost review; it is customized, flexible, and specific to you.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div style={{ backgroundColor: "#FFFFFF", borderLeft: `3px solid ${R}`, padding: "2.5rem", boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}>
               <div style={{ fontFamily: "var(--font-serif)", fontSize: "1.5rem", fontWeight: 300, fontStyle: "italic", color: BK, lineHeight: 1.4, marginBottom: "1.5rem" }}>
-                &ldquo;A fixed-price contract means you know what you&apos;ll pay before we break ground. That&apos;s not a promise — it&apos;s a contractual obligation.&rdquo;
+                &ldquo;Every home is one of a kind — and so is how we document scope, budget, and agreement. The goal is full transparency and confidence that you are receiving real value from every building dollar, whether you are working with a lender or building on a cash basis.&rdquo;
               </div>
               <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.75rem", color: "#A8A4A5" }}>— Warren Taylor, Owner</p>
             </div>
@@ -139,9 +139,9 @@ export default function CostGuide() {
           </ScrollReveal>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem" }} className="diff-grid">
             {[
-              { title: "Fixed-Price Contracts", body: "Once specifications are finalized, we commit to a fixed price. No allowances that become overages. No \u201cunforeseen conditions\u201d on work we should have anticipated." },
-              { title: "Transparent Change Orders", body: "If you change something during construction, we document the cost impact before proceeding. No retroactive billing. No surprises on the final invoice." },
-              { title: "Monthly Budget Reviews", body: "You receive monthly budget reports showing exactly where your money has been allocated and what remains in each category." },
+              { title: "Customized contract and budget analysis", body: "Scope and line items are developed with you before work proceeds. We structure agreement and budget in light of your project, your goals, and whether you are using bank financing or building on a cash basis — with clarity at every step, not a rigid, one-size-fits-all model." },
+              { title: "Transparent change orders", body: "If you change something during construction, we document the cost impact before proceeding. No retroactive billing. No surprises on the final invoice." },
+              { title: "Monthly budget reviews", body: "You receive monthly budget reports showing exactly where your money has been allocated and what remains in each category." },
             ].map((d, i) => (
               <ScrollReveal key={d.title} delay={i * 100}>
                 <div className="card-lift" style={{ borderTop: `3px solid ${R}`, backgroundColor: "#FFFFFF", padding: "2rem", height: "100%" }}>
@@ -151,6 +151,20 @@ export default function CostGuide() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section style={{ backgroundColor: "#FFFFFF", padding: "5rem 2rem" }} className="section-padding">
+        <div style={{ maxWidth: "720px", margin: "0 auto" }}>
+          <ScrollReveal>
+            <Eyebrow>Budget &amp; contract</Eyebrow>
+            <h2 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontWeight: 300, color: BK, lineHeight: 1.25, marginBottom: "1.5rem" }}>
+              Tailored to your build and how you pay for it.
+            </h2>
+            <p style={{ fontFamily: "var(--font-sans)", fontSize: "0.95rem", lineHeight: 1.85, color: MID }}>
+              Every project begins with a thorough budget and cost analysis tailored to your specific build, financing structure, and goals. Whether you&apos;re working with a lender or building on a cash basis, Benchmark will work alongside you and your financial team to structure an agreement that provides full transparency and maximum value from every building dollar. Contract form varies by project; we focus on the confidence that you are getting exactly what was promised — not a single rigid pricing template.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
